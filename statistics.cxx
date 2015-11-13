@@ -29,7 +29,7 @@ double varw(double* poi, int len, double miwe){
 }
 
 int main(){
-   int N = 100;
+   const int N = 100;
    double p[N];
    double mean, var;
    
