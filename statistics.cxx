@@ -5,6 +5,7 @@
 using namespace std;
 
 void fuellhorn(double* poi, int len){
+  srand(time(NULL)); // planting seed - Anfang fuer zufaellige Zufallszahlen
   for(int i=0; i<len; i++){
     poi[i] = rand()/((double)RAND_MAX); // Zufallszahl auf [0,1] normiert
   }
@@ -28,7 +29,7 @@ double varw(double* poi, int len, double miwe){
 }
 
 int main(){
-   int N = 10;
+   int N = 100;
    double p[N];
    double mean, var;
    
@@ -41,6 +42,8 @@ int main(){
     // for the first and every other time!!!
     // => mean and var will always be the exact
     // same values every time as well
+    // Loesung: seed aus time(NULL) nutzen und
+    // mit srand(time(NULL)) setzen (s.o.)
    //////////////////////////////////////////////
    
    // for(int i=0; i<N; i++){
